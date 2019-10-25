@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
+var fs = require('fs');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('functions/1PhotoAnimation/Photo_Story', { layout: 'hero_layout' });
+  res.sendFile('index.html', {root: path.join(__dirname, '../Files')});
 });
 
 module.exports = router;
